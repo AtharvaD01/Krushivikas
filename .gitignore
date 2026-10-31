@@ -63,3 +63,9 @@ __pycache__/
 # Uploaded user files
 backend/uploads/*
 !backend/uploads/.gitkeep
+
+# All Python virtual environments
+.venv*/
+**/.venv*/
+venv/
+**/venv/
