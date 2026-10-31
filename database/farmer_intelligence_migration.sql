@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS farmer_claim_codes (
+  claim_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  farmer_id INT UNSIGNED NOT NULL,
+  code_hash CHAR(64) NOT NULL UNIQUE,
+  expires_at DATETIME NOT NULL,
+  claimed_at DATETIME NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_claim_farmer (farmer_id),
+  CONSTRAINT fk_claim_farmer
+    FOREIGN KEY (farmer_id) REFERENCES farmers(farmer_id)
+    ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+ALTER TABLE farmer_farm_profiles
+  ADD COLUMN IF NOT EXISTS soil_ph DECIMAL(4,2) NULL,
+  ADD COLUMN IF NOT EXISTS nitrogen_kg_ha DECIMAL(10,2) NULL,
+  ADD COLUMN IF NOT EXISTS phosphorus_kg_ha DECIMAL(10,2) NULL,
+  ADD COLUMN IF NOT EXISTS potassium_kg_ha DECIMAL(10,2) NULL,
+  ADD COLUMN IF NOT EXISTS organic_carbon_pct DECIMAL(5,2) NULL,
+  ADD COLUMN IF NOT EXISTS soil_test_date DATE NULL,
+  ADD COLUMN IF NOT EXISTS soil_test_source VARCHAR(150) NULL;

@@ -1,0 +1,12 @@
+const router = require('express').Router();
+const c = require('../controllers/dashboardController');
+router.get('/summary', c.summary);
+router.get('/stage-losses', c.stageLosses);
+router.get('/wastage', c.wastage);
+router.get('/prices', c.prices);
+router.get('/demand', c.demand);
+router.get('/storage', c.storage);
+router.get('/transportation', c.transportation);
+router.get('/chains', c.chains);
+router.get('/trace/:harvestId', c.trace);
+module.exports = router;

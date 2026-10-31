@@ -1,0 +1,17 @@
+{
+  "source": "CEDA Agmarknet API",
+  "region": "Maharashtra",
+  "commodity": "Banana",
+  "unit": "Source price units; verify unit before converting",
+  "observations": 1097,
+  "training_rows": 875,
+  "test_rows": 219,
+  "date_start": "2022-01-01",
+  "date_end": "2025-10-30",
+  "test_mae": 286.64,
+  "test_rmse": 376.25,
+  "previous_price_baseline_mae": 474.89,
+  "beats_baseline": true,
+  "evaluation_method": "Chronological holdout; final model refitted on all observations",
+  "warning": "Historical experimental model. Last available observation may not represent current market prices."
+}

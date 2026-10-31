@@ -1,0 +1,28 @@
+{
+  "class_names": [
+    "Black Sigatoka",
+    "Fusarium Wilt",
+    "Healthy"
+  ],
+  "test_images": 451,
+  "test_accuracy": 0.975609756097561,
+  "classification_report": "                precision    recall  f1-score   support\n\nBlack Sigatoka       0.96      0.98      0.97       150\n Fusarium Wilt       0.97      0.95      0.96       151\n       Healthy       0.99      0.99      0.99       150\n\n      accuracy                           0.98       451\n     macro avg       0.98      0.98      0.98       451\n  weighted avg       0.98      0.98      0.98       451\n",
+  "confusion_matrix": [
+    [
+      147,
+      3,
+      0
+    ],
+    [
+      6,
+      144,
+      1
+    ],
+    [
+      0,
+      1,
+      149
+    ]
+  ],
+  "evaluation_note": "Recomputed using the saved model and test manifest. Performance on independent farm images remains unverified."
+}
